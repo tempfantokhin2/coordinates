@@ -1,8 +1,4 @@
-import org.example.Point;
-import org.example.FunctionSinus;
-import org.example.FunctionParabola;
-import org.example.FunctionLine;
-import org.example.PointGenerator;
+import org.example.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -60,7 +56,7 @@ public class PointGeneratorTest {
     @Test
     public void testSavePointsToExcelFile_SavesPointsToFile() throws IOException {
         // Act
-        PointGenerator.savePointsToExcelFile(points, tempFile.getAbsolutePath());
+        Main.savePointsToExcelFile(points, tempFile.getAbsolutePath());
 
         // Assert
         assertTrue(Files.exists(Paths.get(tempFile.getAbsolutePath())));
